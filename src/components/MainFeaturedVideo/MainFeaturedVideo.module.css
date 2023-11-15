@@ -1,0 +1,57 @@
+.mainFeaturedVideo {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.coverImage {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.videoDetails {
+  width: 300px;
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  color: #fff;
+  text-align: start;
+}
+
+.videoDetails p {
+  margin: 5px 0;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.playButton,
+.moreInfoButton {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.playButton {
+  background-color: #fff;
+  color: black;
+  padding: 13px;
+  width: 97px;
+  font-size: 21px;
+  font-family: monospace;
+}
+
+.moreInfoButton {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 13px;
+  width: 140px;
+  font-size: 21px;
+  font-family: monospace;
+}
