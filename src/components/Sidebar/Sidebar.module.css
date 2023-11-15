@@ -1,11 +1,12 @@
 .sidebar {
   width: 60px;
+  height: 100%;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   transition: width 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 10000;
   overflow: hidden;
 }
 
@@ -16,30 +17,35 @@
 .mainMenu {
   list-style: none;
   padding: 0;
-  margin: 0;
   margin-top: 40px;
 }
 
 .mainMenu li {
+  position: relative;;
   display: flex;
   align-items: center;
   padding: 10px 0;
   cursor: pointer;
+  z-index: 99999;
   transition: background-color 0.3s ease, width 0.3s ease;
 }
-.active {
-  color: gray;
+.menu ul {
+  position: relative;;
+  z-index: 99999;
 }
+
 .mainMenu li:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mainMenu .text {
+  position: relative;;
+  z-index: 99999;
   width: auto;
   overflow: hidden;
   white-space: nowrap;
   transition: width 0.3s ease;
-  padding-left: 5px;
+  padding-left: 20px;
 }
 
 .profileInfo {
@@ -49,7 +55,12 @@
 }
 
 .sidebar:hover {
-  width: 200px;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mainMenu li:hover .sidebar::before {
+  width: 100%;
 }
 
 .sidebar:hover .profileInfo {
@@ -62,6 +73,8 @@
   color: white;
 }
 .additionalMenu li {
+  text-align: left;
+  list-style-type: none;
   padding: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
